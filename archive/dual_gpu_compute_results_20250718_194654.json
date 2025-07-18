@@ -1,0 +1,54 @@
+{
+  "optimization_type": "Dual-GPU Distributed Compute Optimization",
+  "timestamp": "20250718_194654",
+  "cluster_configuration": {
+    "total_gpus": 2.0,
+    "total_cpus": 96.0,
+    "head_pc": "RTX 3090",
+    "worker_pc": "RTX 3070"
+  },
+  "research_findings_applied": [
+    "Distributed execution across 2 PCs",
+    "Multiple CUDA streams",
+    "Tensor core optimization",
+    "Mixed precision (FP16)",
+    "Memory-aware allocation",
+    "Concurrent execution"
+  ],
+  "performance_summary": {
+    "total_time": 65.81797790527344,
+    "successful_workers": 2,
+    "total_workers": 2,
+    "total_iterations": 114,
+    "iterations_per_second": 1.7320495649998713,
+    "combined_avg_tflops": 81.2867275107637,
+    "performance_improvement_factor": 0.0062545554975360846,
+    "estimated_gpu_utilization_percent": 0.031272777487680425
+  },
+  "worker_details": [
+    {
+      "worker_id": 0,
+      "gpu_type": "RTX3090",
+      "duration_minutes": 1,
+      "total_iterations": 11,
+      "total_time": 65.61572003364563,
+      "avg_operation_time": 5.964693156155673,
+      "avg_tflops": 53.10638060124465,
+      "peak_tflops": 54.555115909298955,
+      "avg_ops_per_second": 0.1677082353721133,
+      "status": "success"
+    },
+    {
+      "worker_id": 1,
+      "gpu_type": "RTX3070",
+      "duration_minutes": 1,
+      "total_iterations": 103,
+      "total_time": 60.32625436782837,
+      "avg_operation_time": 0.5853088110396005,
+      "avg_tflops": 28.18034690951904,
+      "peak_tflops": 28.75315546690515,
+      "avg_ops_per_second": 1.708658413888712,
+      "status": "success"
+    }
+  ]
+}

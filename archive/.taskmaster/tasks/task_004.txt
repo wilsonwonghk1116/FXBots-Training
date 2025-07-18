@@ -1,0 +1,15 @@
+# Task ID: 4
+# Title: Build Advanced Neural Network Architecture
+# Status: pending
+# Dependencies: 2, 3
+# Priority: high
+# Description: Implement multi-layer LSTM with self-attention for trading intelligence, optimized for GPU.
+# Details:
+- Use PyTorch nn.LSTM and nn.MultiheadAttention.
+- Design for large batch sizes and sequence lengths.
+- Integrate mixed precision (torch.cuda.amp) for FP16/FP32.
+- Profile VRAM usage with torch.cuda.memory_allocated().
+- Use FlashAttention (if compatible) for further speedup.
+
+# Test Strategy:
+Unit tests for forward/backward pass, VRAM profiling, and output shapes. Benchmark with synthetic data.

@@ -1,0 +1,18 @@
+
+# Commands to run on Worker PC (192.168.1.11):
+
+# 1. First, copy the project files if not already done:
+scp -r w1@192.168.1.10:/home/w1/cursor-to-copilot-backup/TaskmasterForexBots /home/w2/cursor-to-copilot-backup/
+
+# 2. Activate conda environment:
+conda activate BotsTraining_env
+
+# 3. Set environment variables:
+export PYTHONPATH="/home/w1/cursor-to-copilot-backup/TaskmasterForexBots:/home/w2/cursor-to-copilot-backup/TaskmasterForexBots:$PYTHONPATH"
+export RAY_CLUSTER=1
+
+# 4. Connect to Ray cluster:
+ray start --address='192.168.1.10:6379' --temp-dir=/tmp/ray
+
+# 5. Check connection:
+ray status

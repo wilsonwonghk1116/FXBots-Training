@@ -1,0 +1,186 @@
+{
+  "final_results": {
+    "total_reward": 683.5445317425962,
+    "total_trades": 31,
+    "final_balance": 100006.8354453174,
+    "actions_taken": {
+      "HOLD": 0,
+      "BUY": 472,
+      "SELL": 17
+    },
+    "bot_id": 4
+  },
+  "generation_stats": [
+    {
+      "generation": 1,
+      "best_balance": 100005.31943982358,
+      "avg_balance": 100002.45474151308,
+      "best_trades": 49,
+      "actions": {
+        "HOLD": 463,
+        "BUY": 81,
+        "SELL": 119
+      }
+    },
+    {
+      "generation": 2,
+      "best_balance": 100010.36921181784,
+      "avg_balance": 100003.27348204561,
+      "best_trades": 58,
+      "actions": {
+        "HOLD": 46,
+        "BUY": 1347,
+        "SELL": 42
+      }
+    },
+    {
+      "generation": 3,
+      "best_balance": 100008.24989881914,
+      "avg_balance": 100005.21688104453,
+      "best_trades": 22,
+      "actions": {
+        "HOLD": 0,
+        "BUY": 425,
+        "SELL": 13
+      }
+    },
+    {
+      "generation": 4,
+      "best_balance": 100007.01767170413,
+      "avg_balance": 100005.22474858233,
+      "best_trades": 23,
+      "actions": {
+        "HOLD": 0,
+        "BUY": 686,
+        "SELL": 24
+      }
+    },
+    {
+      "generation": 5,
+      "best_balance": 100007.75242836849,
+      "avg_balance": 100005.52903286125,
+      "best_trades": 30,
+      "actions": {
+        "HOLD": 0,
+        "BUY": 1732,
+        "SELL": 47
+      }
+    },
+    {
+      "generation": 6,
+      "best_balance": 100007.83930282954,
+      "avg_balance": 100005.30748743562,
+      "best_trades": 20,
+      "actions": {
+        "HOLD": 0,
+        "BUY": 1673,
+        "SELL": 47
+      }
+    },
+    {
+      "generation": 7,
+      "best_balance": 100007.65712656156,
+      "avg_balance": 100005.44111205342,
+      "best_trades": 18,
+      "actions": {
+        "HOLD": 0,
+        "BUY": 1419,
+        "SELL": 40
+      }
+    },
+    {
+      "generation": 8,
+      "best_balance": 100008.39364603172,
+      "avg_balance": 100005.78216341538,
+      "best_trades": 24,
+      "actions": {
+        "HOLD": 0,
+        "BUY": 1563,
+        "SELL": 46
+      }
+    },
+    {
+      "generation": 9,
+      "best_balance": 100007.18394374213,
+      "avg_balance": 100005.40624317924,
+      "best_trades": 18,
+      "actions": {
+        "HOLD": 1,
+        "BUY": 1360,
+        "SELL": 41
+      }
+    },
+    {
+      "generation": 10,
+      "best_balance": 100010.07778760808,
+      "avg_balance": 100005.74491802444,
+      "best_trades": 44,
+      "actions": {
+        "HOLD": 0,
+        "BUY": 2020,
+        "SELL": 58
+      }
+    },
+    {
+      "generation": 11,
+      "best_balance": 100007.72534068518,
+      "avg_balance": 100005.09196993586,
+      "best_trades": 13,
+      "actions": {
+        "HOLD": 0,
+        "BUY": 756,
+        "SELL": 20
+      }
+    },
+    {
+      "generation": 12,
+      "best_balance": 100008.66144209875,
+      "avg_balance": 100005.57453170579,
+      "best_trades": 19,
+      "actions": {
+        "HOLD": 0,
+        "BUY": 1301,
+        "SELL": 46
+      }
+    },
+    {
+      "generation": 13,
+      "best_balance": 100006.22305563046,
+      "avg_balance": 100004.95823029843,
+      "best_trades": 11,
+      "actions": {
+        "HOLD": 0,
+        "BUY": 694,
+        "SELL": 21
+      }
+    },
+    {
+      "generation": 14,
+      "best_balance": 100005.99179535602,
+      "avg_balance": 100005.07228787403,
+      "best_trades": 15,
+      "actions": {
+        "HOLD": 0,
+        "BUY": 361,
+        "SELL": 11
+      }
+    },
+    {
+      "generation": 15,
+      "best_balance": 100008.40114158062,
+      "avg_balance": 100005.19384665057,
+      "best_trades": 19,
+      "actions": {
+        "HOLD": 0,
+        "BUY": 1023,
+        "SELL": 32
+      }
+    }
+  ],
+  "summary": {
+    "best_final_balance": 100006.8354453174,
+    "improvement": 6.835445317396079,
+    "total_generations": 15,
+    "timestamp": "2025-07-12T01:49:37.626648"
+  }
+}

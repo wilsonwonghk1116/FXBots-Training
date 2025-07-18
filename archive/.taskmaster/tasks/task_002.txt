@@ -1,0 +1,14 @@
+# Task ID: 2
+# Title: Implement Modular Codebase Structure
+# Status: pending
+# Dependencies: 1
+# Priority: high
+# Description: Design and scaffold modular architecture with clear separation for environment, model, trainer, and utilities.
+# Details:
+- Create Python packages: environment/, models/, trainer/, utils/.
+- Use abstract base classes for extensibility.
+- Follow PEP8 and modern Python packaging standards.
+- Add __init__.py and module docstrings.
+
+# Test Strategy:
+Run pytest to ensure modules import correctly and basic instantiation works.

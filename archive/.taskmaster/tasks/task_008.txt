@@ -1,0 +1,15 @@
+# Task ID: 8
+# Title: Optimize RTX 3090 Hardware Utilization
+# Status: pending
+# Dependencies: 4, 6, 7
+# Priority: high
+# Description: Tune training loop and memory management for 95%+ VRAM and GPU usage, leveraging Ampere features.
+# Details:
+- Use torch.cuda.amp for mixed precision.
+- Aggressively tune batch sizes and sequence lengths.
+- Profile with torch.profiler and nvidia-smi.
+- Implement garbage collection and memory pinning.
+- Monitor and adjust power/thermal limits (nvidia-smi, see [1]).
+
+# Test Strategy:
+Run training with synthetic and real data, confirm 95%+ VRAM/GPU usage via nvidia-smi and logs.

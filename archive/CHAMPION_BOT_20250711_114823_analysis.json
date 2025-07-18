@@ -1,0 +1,31 @@
+{
+  "champion_analysis": {
+    "bot_id": 0,
+    "final_balance": 10000.0,
+    "total_return_pct": 0.0,
+    "win_rate": 0,
+    "total_trades": 0,
+    "gross_profit": 0,
+    "gross_loss": 0,
+    "profit_factor": 0,
+    "average_win": 0,
+    "average_loss": 0,
+    "risk_reward_ratio": 0,
+    "max_drawdown": 0,
+    "recovery_factor": 0,
+    "sharpe_ratio": 0,
+    "calmar_ratio": 0,
+    "trade_history": [],
+    "balance_curve": [
+      10000.0,
+      10000.0
+    ]
+  },
+  "training_summary": {
+    "population_size": 1000,
+    "batch_size": 8192,
+    "target_vram_percent": 0.85,
+    "device": "cuda",
+    "timestamp": "2025-07-11T11:48:23.284329"
+  }
+}

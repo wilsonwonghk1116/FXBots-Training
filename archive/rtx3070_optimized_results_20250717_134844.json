@@ -1,0 +1,51 @@
+{
+  "training_completed": true,
+  "duration_minutes": 1,
+  "total_workers": 2,
+  "total_iterations": 6754,
+  "total_operations": 19039,
+  "pc1_workers": 1,
+  "pc2_workers": 1,
+  "pc1_total_ops": 16380,
+  "pc2_total_ops": 2659,
+  "pc1_ops_per_second": 272.7780798335514,
+  "pc2_ops_per_second": 44.315846062331794,
+  "rtx3070_memory_failures": 0,
+  "rtx3070_success_rate": 100.0,
+  "memory_optimization": "ULTRA_CONSERVATIVE_RTX3070",
+  "individual_results": [
+    {
+      "worker_id": 0,
+      "pc": "PC1_RTX3090_STABLE",
+      "device": "cuda:0",
+      "iterations": 4095,
+      "total_operations": 16380,
+      "best_score": 0.842558125,
+      "duration_seconds": 60.048813343048096,
+      "ops_per_second": 272.7780798335514,
+      "memory_info": {
+        "total": 23.56658935546875,
+        "allocated": 14.0079345703125,
+        "cached": 14.01953125,
+        "free": 9.55865478515625,
+        "utilization": 59.43980420341091,
+        "device_name": "NVIDIA GeForce RTX 3090",
+        "multiprocessor_count": 82
+      }
+    },
+    {
+      "worker_id": 100,
+      "pc": "PC2_RTX3070_ULTRA_CONSERVATIVE",
+      "device": "cpu",
+      "iterations": 2659,
+      "total_operations": 2659,
+      "best_score": 0.0045007333984375,
+      "duration_seconds": 60.00111103057861,
+      "ops_per_second": 44.315846062331794,
+      "memory_failures": 0,
+      "success_count": 0,
+      "final_matrix_size": 1024,
+      "memory_info": null
+    }
+  ]
+}

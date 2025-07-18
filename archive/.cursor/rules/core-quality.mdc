@@ -1,0 +1,21 @@
+---
+description: Core Quality & Testing
+globs:
+  - "**/*.ts"
+alwaysApply: false
+type: AutoAttached
+---
+
+# Standards
+- Follow **ESLint-Airbnb** rules; if violation detected, rewrite code to comply.
+- All new functions **must** include JSDoc with param & return types.
+
+# Testing
+- Before final answer, generate or update **vitest** tests to reach ≥90% branch coverage.
+- Run `npm run test:ci` (YOLO allowed). If tests fail, fix code & retry.
+
+# Output Format
+Return blocks sequentially:
+1. `````` patch
+2. `````` commands (if any)
+3. Summary (≤80 words)

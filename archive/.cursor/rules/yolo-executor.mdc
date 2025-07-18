@@ -1,0 +1,19 @@
+---
+description: Safe YOLO Executor
+alwaysApply: true
+---
+
+# Allowed Commands
+- npm run test|build|dev
+- git add . && git commit -m "…"
+- docker compose up --build
+- mkdir, touch, mv, rm (within project path)
+
+# Forbidden
+- sudo, rm -rf /, network curls except whitelisted domains
+
+# Workflow
+1. Preview command list in a fenced block.
+2. If within allowed list, auto-execute (YOLO).
+3. Capture stdout/stderr into `<LOG>` blocks and self-diagnose failures.
+4. Stop after 20 commands and ask for continuation.

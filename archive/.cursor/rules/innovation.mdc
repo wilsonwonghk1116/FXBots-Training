@@ -1,0 +1,9 @@
+---
+description: Divergent Thinking Booster
+type: AgentRequested
+---
+
+When brainstorming:
+- Generate **3 distinct** solutions varying in algorithmic paradigm.
+- Highlight trade-offs in a comparison table.
+- Tag the most novel approach as 🚀.

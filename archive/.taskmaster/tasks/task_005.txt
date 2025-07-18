@@ -1,0 +1,14 @@
+# Task ID: 5
+# Title: Implement Smart Forex Trading Environment
+# Status: pending
+# Dependencies: 2, 3
+# Priority: high
+# Description: Create a high-performance trading environment simulating multi-currency, multi-timeframe Forex markets.
+# Details:
+- Use vectorized NumPy/Pandas for data processing.
+- Support multiple currency pairs and timeframes.
+- Integrate real-time market regime detection (trending, ranging, volatile) using statistical indicators.
+- Provide Gym-like API for agent interaction.
+
+# Test Strategy:
+Unit tests for environment reset/step, regime detection accuracy, and data integrity.

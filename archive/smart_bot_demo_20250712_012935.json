@@ -1,0 +1,266 @@
+{
+  "training_summary": {
+    "generations": 6,
+    "population_size": 8,
+    "device": "cuda",
+    "timestamp": "2025-07-12T01:29:35.098719"
+  },
+  "generation_stats": [
+    {
+      "generation": 1,
+      "best_balance": 50000.0,
+      "avg_balance": 50000.0,
+      "best_trades": 0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 1997,
+        "BUY": 0,
+        "SELL": 0
+      },
+      "win_rate": 0.0,
+      "first_trade_step": null
+    },
+    {
+      "generation": 2,
+      "best_balance": 50000.0,
+      "avg_balance": 50000.0,
+      "best_trades": 0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 523,
+        "BUY": 0,
+        "SELL": 0
+      },
+      "win_rate": 0.0,
+      "first_trade_step": null
+    },
+    {
+      "generation": 3,
+      "best_balance": 50000.0,
+      "avg_balance": 50000.0,
+      "best_trades": 0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 248,
+        "BUY": 0,
+        "SELL": 0
+      },
+      "win_rate": 0.0,
+      "first_trade_step": null
+    },
+    {
+      "generation": 4,
+      "best_balance": 50000.0,
+      "avg_balance": 50000.0,
+      "best_trades": 0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 700,
+        "BUY": 0,
+        "SELL": 0
+      },
+      "win_rate": 0.0,
+      "first_trade_step": null
+    },
+    {
+      "generation": 5,
+      "best_balance": 50000.0,
+      "avg_balance": 50000.0,
+      "best_trades": 0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 864,
+        "BUY": 0,
+        "SELL": 0
+      },
+      "win_rate": 0.0,
+      "first_trade_step": null
+    },
+    {
+      "generation": 6,
+      "best_balance": 50000.0,
+      "avg_balance": 50000.0,
+      "best_trades": 0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 24,
+        "BUY": 0,
+        "SELL": 0
+      },
+      "win_rate": 0.0,
+      "first_trade_step": null
+    }
+  ],
+  "champion_metrics": {
+    "total_reward": -1.0,
+    "total_trades": 0,
+    "final_balance": 50000.0,
+    "actions_taken": {
+      "HOLD": 3,
+      "BUY": 0,
+      "SELL": 0
+    },
+    "first_trade_step": null,
+    "profitable_trades": 0,
+    "win_rate": 0.0,
+    "action_percentages": {
+      "HOLD": 100.0,
+      "BUY": 0.0,
+      "SELL": 0.0
+    },
+    "bot_id": 0
+  },
+  "champion_detailed": {
+    "final_balance": 50000.0,
+    "total_steps": 1,
+    "total_trades": 0,
+    "action_distribution": {
+      "HOLD": 1,
+      "BUY": 0,
+      "SELL": 0
+    },
+    "action_percentages": {
+      "HOLD": 100.0,
+      "BUY": 0.0,
+      "SELL": 0.0
+    },
+    "trades_executed_steps": [],
+    "high_confidence_decisions": 0,
+    "confidence_rate": 0.0,
+    "recent_decisions": [
+      {
+        "step": 0,
+        "action": "HOLD",
+        "action_probs": {
+          "HOLD": 0.3555792272090912,
+          "BUY": 0.3205094039440155,
+          "SELL": 0.3239114284515381
+        },
+        "position_size": 0.48797157406806946,
+        "reward": -1.0,
+        "balance": 50000.0,
+        "position": 0,
+        "trade_executed": false
+      }
+    ],
+    "balance_curve": [
+      50000.0
+    ]
+  },
+  "evolution_progress": [
+    {
+      "total_reward": -9.0,
+      "total_trades": 0,
+      "final_balance": 50000.0,
+      "actions_taken": {
+        "HOLD": 27,
+        "BUY": 0,
+        "SELL": 0
+      },
+      "first_trade_step": null,
+      "profitable_trades": 0,
+      "win_rate": 0.0,
+      "action_percentages": {
+        "HOLD": 100.0,
+        "BUY": 0.0,
+        "SELL": 0.0
+      },
+      "bot_id": 0
+    },
+    {
+      "total_reward": -1.0,
+      "total_trades": 0,
+      "final_balance": 50000.0,
+      "actions_taken": {
+        "HOLD": 3,
+        "BUY": 0,
+        "SELL": 0
+      },
+      "first_trade_step": null,
+      "profitable_trades": 0,
+      "win_rate": 0.0,
+      "action_percentages": {
+        "HOLD": 100.0,
+        "BUY": 0.0,
+        "SELL": 0.0
+      },
+      "bot_id": 0
+    },
+    {
+      "total_reward": -60.0,
+      "total_trades": 0,
+      "final_balance": 50000.0,
+      "actions_taken": {
+        "HOLD": 180,
+        "BUY": 0,
+        "SELL": 0
+      },
+      "first_trade_step": null,
+      "profitable_trades": 0,
+      "win_rate": 0.0,
+      "action_percentages": {
+        "HOLD": 100.0,
+        "BUY": 0.0,
+        "SELL": 0.0
+      },
+      "bot_id": 0
+    },
+    {
+      "total_reward": -1.0,
+      "total_trades": 0,
+      "final_balance": 50000.0,
+      "actions_taken": {
+        "HOLD": 3,
+        "BUY": 0,
+        "SELL": 0
+      },
+      "first_trade_step": null,
+      "profitable_trades": 0,
+      "win_rate": 0.0,
+      "action_percentages": {
+        "HOLD": 100.0,
+        "BUY": 0.0,
+        "SELL": 0.0
+      },
+      "bot_id": 0
+    },
+    {
+      "total_reward": -11.0,
+      "total_trades": 0,
+      "final_balance": 50000.0,
+      "actions_taken": {
+        "HOLD": 33,
+        "BUY": 0,
+        "SELL": 0
+      },
+      "first_trade_step": null,
+      "profitable_trades": 0,
+      "win_rate": 0.0,
+      "action_percentages": {
+        "HOLD": 100.0,
+        "BUY": 0.0,
+        "SELL": 0.0
+      },
+      "bot_id": 0
+    },
+    {
+      "total_reward": -1.0,
+      "total_trades": 0,
+      "final_balance": 50000.0,
+      "actions_taken": {
+        "HOLD": 3,
+        "BUY": 0,
+        "SELL": 0
+      },
+      "first_trade_step": null,
+      "profitable_trades": 0,
+      "win_rate": 0.0,
+      "action_percentages": {
+        "HOLD": 100.0,
+        "BUY": 0.0,
+        "SELL": 0.0
+      },
+      "bot_id": 0
+    }
+  ]
+}

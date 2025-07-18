@@ -1,0 +1,385 @@
+{
+  "champion_analysis": {
+    "bot_id": 361,
+    "final_balance": 10000.51355777267,
+    "total_return_pct": 0.005135577726705378,
+    "win_rate": 0.555045871559633,
+    "total_trades": 218,
+    "gross_profit": 780.4783304062715,
+    "gross_loss": 536.1135279533613,
+    "profit_factor": 1.455807939385123,
+    "average_win": 6.450234135589018,
+    "average_loss": -5.526943587148055,
+    "risk_reward_ratio": 1.167052645622784,
+    "max_drawdown": 0,
+    "recovery_factor": 0,
+    "sharpe_ratio": 0,
+    "calmar_ratio": 0,
+    "trade_history": [
+      {
+        "type": "close_short",
+        "entry_price": 1.1216109742676794,
+        "exit_price": 1.1205563866425405,
+        "profit": -10.545876251388808,
+        "step": 1373
+      },
+      {
+        "type": "close_long",
+        "entry_price": 1.1205563866425405,
+        "exit_price": 1.1197505241900265,
+        "profit": -8.058624525140168,
+        "step": 1374
+      },
+      {
+        "type": "close_short",
+        "entry_price": 1.1197505241900265,
+        "exit_price": 1.1204870315143145,
+        "profit": 7.365073242879827,
+        "step": 1375
+      },
+      {
+        "type": "close_long",
+        "entry_price": 1.1204870315143145,
+        "exit_price": 1.1200496890005984,
+        "profit": -4.373425137160769,
+        "step": 1377
+      },
+      {
+        "type": "close_short",
+        "entry_price": 1.1200496890005984,
+        "exit_price": 1.1211826490107535,
+        "profit": 11.329600101550596,
+        "step": 1380
+      },
+      {
+        "type": "close_long",
+        "entry_price": 1.1211826490107535,
+        "exit_price": 1.1212795468945984,
+        "profit": 0.9689788384492637,
+        "step": 1382
+      },
+      {
+        "type": "close_short",
+        "entry_price": 1.1212795468945984,
+        "exit_price": 1.1240134086530238,
+        "profit": 27.33861758425382,
+        "step": 1388
+      },
+      {
+        "type": "close_long",
+        "entry_price": 1.1240134086530238,
+        "exit_price": 1.1240303778419798,
+        "profit": 0.16969188955995307,
+        "step": 1389
+      },
+      {
+        "type": "close_short",
+        "entry_price": 1.1240303778419798,
+        "exit_price": 1.12388559659522,
+        "profit": -1.4478124675987303,
+        "step": 1391
+      },
+      {
+        "type": "close_long",
+        "entry_price": 1.12388559659522,
+        "exit_price": 1.1245553833542572,
+        "profit": 6.69786759037283,
+        "step": 1393
+      },
+      {
+        "type": "close_short",
+        "entry_price": 1.1245553833542572,
+        "exit_price": 1.1245171527020454,
+        "profit": -0.3823065221175703,
+        "step": 1408
+      },
+      {
+        "type": "close_long",
+        "entry_price": 1.1245171527020454,
+        "exit_price": 1.1251766045446732,
+        "profit": 6.594518426277229,
+        "step": 1412
+      },
+      {
+        "type": "close_short",
+        "entry_price": 1.1251766045446732,
+        "exit_price": 1.1254055482833658,
+        "profit": 2.2894373869264406,
+        "step": 1413
+      },
+      {
+        "type": "close_long",
+        "entry_price": 1.1254055482833658,
+        "exit_price": 1.1264890494301338,
+        "profit": 10.835011467680289,
+        "step": 1414
+      },
+      {
+        "type": "close_short",
+        "entry_price": 1.1264890494301338,
+        "exit_price": 1.1266627165944143,
+        "profit": 1.7366716428046658,
+        "step": 1417
+      },
+      {
+        "type": "close_long",
+        "entry_price": 1.1266627165944143,
+        "exit_price": 1.1267980121948895,
+        "profit": 1.3529560047520484,
+        "step": 1418
+      },
+      {
+        "type": "close_short",
+        "entry_price": 1.1267980121948895,
+        "exit_price": 1.127818161973704,
+        "profit": 10.201497788144831,
+        "step": 1420
+      },
+      {
+        "type": "close_long",
+        "entry_price": 1.127818161973704,
+        "exit_price": 1.1280883080398814,
+        "profit": 2.7014606617736803,
+        "step": 1421
+      },
+      {
+        "type": "close_short",
+        "entry_price": 1.1280883080398814,
+        "exit_price": 1.128444079263913,
+        "profit": 3.557712240316313,
+        "step": 1423
+      },
+      {
+        "type": "close_long",
+        "entry_price": 1.128444079263913,
+        "exit_price": 1.1268907216342494,
+        "profit": -15.533576296635765,
+        "step": 1429
+      },
+      {
+        "type": "close_short",
+        "entry_price": 1.1268907216342494,
+        "exit_price": 1.1275171960339476,
+        "profit": 6.2647439969820695,
+        "step": 1436
+      },
+      {
+        "type": "close_long",
+        "entry_price": 1.1275171960339476,
+        "exit_price": 1.128444929687228,
+        "profit": 9.277336532804714,
+        "step": 1439
+      },
+      {
+        "type": "close_short",
+        "entry_price": 1.128444929687228,
+        "exit_price": 1.1298249140680967,
+        "profit": 13.799843808686152,
+        "step": 1443
+      },
+      {
+        "type": "close_long",
+        "entry_price": 1.1298249140680967,
+        "exit_price": 1.129378253995337,
+        "profit": -4.466600727597303,
+        "step": 1445
+      },
+      {
+        "type": "close_short",
+        "entry_price": 1.129378253995337,
+        "exit_price": 1.1290535270139412,
+        "profit": -3.2472698139573986,
+        "step": 1446
+      },
+      {
+        "type": "close_long",
+        "entry_price": 1.1290535270139412,
+        "exit_price": 1.1290842941433834,
+        "profit": 0.3076712944216631,
+        "step": 1448
+      },
+      {
+        "type": "close_short",
+        "entry_price": 1.1290842941433834,
+        "exit_price": 1.1297043774851951,
+        "profit": 6.200833418117391,
+        "step": 1449
+      },
+      {
+        "type": "close_long",
+        "entry_price": 1.1297043774851951,
+        "exit_price": 1.1297159516710578,
+        "profit": 0.1157418586261727,
+        "step": 1450
+      },
+      {
+        "type": "close_short",
+        "entry_price": 1.1297159516710578,
+        "exit_price": 1.1308446460436727,
+        "profit": 11.2869437261498,
+        "step": 1453
+      },
+      {
+        "type": "close_long",
+        "entry_price": 1.1308446460436727,
+        "exit_price": 1.1315506208141684,
+        "profit": 7.059747704956099,
+        "step": 1456
+      },
+      {
+        "type": "close_short",
+        "entry_price": 1.1315506208141684,
+        "exit_price": 1.1319282035547888,
+        "profit": 3.775827406204968,
+        "step": 1457
+      },
+      {
+        "type": "close_long",
+        "entry_price": 1.1319282035547888,
+        "exit_price": 1.1331029603335205,
+        "profit": 11.747567787316893,
+        "step": 1460
+      },
+      {
+        "type": "close_short",
+        "entry_price": 1.1331029603335205,
+        "exit_price": 1.1318953631195925,
+        "profit": -12.075972139280466,
+        "step": 1464
+      },
+      {
+        "type": "close_long",
+        "entry_price": 1.1318953631195925,
+        "exit_price": 1.1319011381756736,
+        "profit": 0.05775056081125385,
+        "step": 1466
+      },
+      {
+        "type": "close_short",
+        "entry_price": 1.1319011381756736,
+        "exit_price": 1.1327983312528946,
+        "profit": 8.971930772210257,
+        "step": 1474
+      },
+      {
+        "type": "close_long",
+        "entry_price": 1.1327983312528946,
+        "exit_price": 1.132221694327266,
+        "profit": -5.76636925628593,
+        "step": 1480
+      },
+      {
+        "type": "close_short",
+        "entry_price": 1.132221694327266,
+        "exit_price": 1.1331763531789014,
+        "profit": 9.546588516353705,
+        "step": 1485
+      },
+      {
+        "type": "close_long",
+        "entry_price": 1.1331763531789014,
+        "exit_price": 1.132055311051305,
+        "profit": -11.2104212759645,
+        "step": 1488
+      },
+      {
+        "type": "close_short",
+        "entry_price": 1.132055311051305,
+        "exit_price": 1.1345168967789172,
+        "profit": 24.615857276122366,
+        "step": 1496
+      },
+      {
+        "type": "close_long",
+        "entry_price": 1.1345168967789172,
+        "exit_price": 1.1361531846120765,
+        "profit": 16.36287833159278,
+        "step": 1498
+      },
+      {
+        "type": "close_short",
+        "entry_price": 1.1361531846120765,
+        "exit_price": 1.1370776831785263,
+        "profit": 9.244985664498273,
+        "step": 1502
+      },
+      {
+        "type": "close_long",
+        "entry_price": 1.1370776831785263,
+        "exit_price": 1.1366692187018568,
+        "profit": -4.0846447666953445,
+        "step": 1503
+      },
+      {
+        "type": "close_short",
+        "entry_price": 1.1366692187018568,
+        "exit_price": 1.136357683240083,
+        "profit": -3.115354617737598,
+        "step": 1506
+      },
+      {
+        "type": "close_long",
+        "entry_price": 1.136357683240083,
+        "exit_price": 1.1367064805275537,
+        "profit": 3.487972874707257,
+        "step": 1507
+      },
+      {
+        "type": "close_short",
+        "entry_price": 1.1367064805275537,
+        "exit_price": 1.137398590689971,
+        "profit": 6.921101624173254,
+        "step": 1511
+      },
+      {
+        "type": "close_long",
+        "entry_price": 1.137398590689971,
+        "exit_price": 1.1373023239206472,
+        "profit": -0.9626676932383837,
+        "step": 1512
+      },
+      {
+        "type": "close_short",
+        "entry_price": 1.1373023239206472,
+        "exit_price": 1.1369444674278124,
+        "profit": -3.5785649283481824,
+        "step": 1513
+      },
+      {
+        "type": "close_long",
+        "entry_price": 1.1369444674278124,
+        "exit_price": 1.1360117454384269,
+        "profit": -9.327219893855432,
+        "step": 1514
+      },
+      {
+        "type": "close_short",
+        "entry_price": 1.1360117454384269,
+        "exit_price": 1.1359105987169837,
+        "profit": -1.0114672144312387,
+        "step": 1516
+      },
+      {
+        "type": "close_long",
+        "entry_price": 1.1359105987169837,
+        "exit_price": 1.1366678445383869,
+        "profit": 7.572458214031297,
+        "step": 1517
+      }
+    ],
+    "balance_curve": [
+      10002.562285284614,
+      10000.001416641817,
+      10000.003082113371,
+      10000.002625408115,
+      9999.99837941543
+    ],
+    "simulations_count": 5
+  },
+  "system_info": {
+    "population_size": 400,
+    "device": "cuda",
+    "vram_optimization": "Stable 85% RTX 3090 24GB",
+    "timestamp": "2025-07-02T03:20:08.160017"
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "bot_metrics": [
+    {
+      "bot_id": 36,
+      "current_equity": 116856.58595001846,
+      "total_pnl": 16856.585950018452,
+      "win_rate": 0.485,
+      "total_trades": 153,
+      "sharpe_ratio": -0.11071265555816545,
+      "max_drawdown": 0.24891346671199088,
+      "last_update": 1752335478.961024
+    },
+    {
+      "bot_id": 0,
+      "current_equity": 116082.46370124852,
+      "total_pnl": 16082.463701248515,
+      "win_rate": 0.482,
+      "total_trades": 195,
+      "sharpe_ratio": 1.5526389160810354,
+      "max_drawdown": 0.15693349692843675,
+      "last_update": 1752335477.1645231
+    },
+    {
+      "bot_id": 46,
+      "current_equity": 115674.37668691986,
+      "total_pnl": 15674.37668691986,
+      "win_rate": 0.493,
+      "total_trades": 165,
+      "sharpe_ratio": 2.586532765422386,
+      "max_drawdown": 0.23648751671162918,
+      "last_update": 1752335483.972726
+    },
+    {
+      "bot_id": 20,
+      "current_equity": 115529.9224387751,
+      "total_pnl": 15529.922438775102,
+      "win_rate": 0.479,
+      "total_trades": 79,
+      "sharpe_ratio": 2.837213409606015,
+      "max_drawdown": 0.24559337567051504,
+      "last_update": 1752335471.9367933
+    },
+    {
+      "bot_id": 29,
+      "current_equity": 114994.1714903191,
+      "total_pnl": 14994.171490319108,
+      "win_rate": 0.482,
+      "total_trades": 71,
+      "sharpe_ratio": 1.8111671883276323,
+      "max_drawdown": 0.08171406015880485,
+      "last_update": 1752335477.1675847
+    },
+    {
+      "bot_id": 9,
+      "current_equity": 114837.19377529145,
+      "total_pnl": 14837.193775291453,
+      "win_rate": 0.526,
+      "total_trades": 85,
+      "sharpe_ratio": 1.6169284456263222,
+      "max_drawdown": 0.02406415518102494,
+      "last_update": 1752335470.0888364
+    },
+    {
+      "bot_id": 9,
+      "current_equity": 114443.56747597382,
+      "total_pnl": 14443.567475973812,
+      "win_rate": 0.534,
+      "total_trades": 145,
+      "sharpe_ratio": 1.360976376911661,
+      "max_drawdown": 0.29229215416067056,
+      "last_update": 1752335480.550382
+    },
+    {
+      "bot_id": 10,
+      "current_equity": 114269.73497060259,
+      "total_pnl": 14269.734970602585,
+      "win_rate": 0.482,
+      "total_trades": 168,
+      "sharpe_ratio": -0.4133618439775586,
+      "max_drawdown": 0.16375573660471993,
+      "last_update": 1752335477.1655295
+    },
+    {
+      "bot_id": 1,
+      "current_equity": 114213.94488183118,
+      "total_pnl": 14213.944881831174,
+      "win_rate": 0.492,
+      "total_trades": 172,
+      "sharpe_ratio": 0.28910186386402614,
+      "max_drawdown": 0.24512598218774445,
+      "last_update": 1752335468.3403814
+    },
+    {
+      "bot_id": 19,
+      "current_equity": 114118.45072289226,
+      "total_pnl": 14118.450722892254,
+      "win_rate": 0.493,
+      "total_trades": 152,
+      "sharpe_ratio": 0.11879868227639578,
+      "max_drawdown": 0.14460988287876858,
+      "last_update": 1752335479.7901323
+    },
+    {
+      "bot_id": 27,
+      "current_equity": 113757.6966421157,
+      "total_pnl": 13757.696642115694,
+      "win_rate": 0.481,
+      "total_trades": 174,
+      "sharpe_ratio": 0.05465555928658716,
+      "max_drawdown": 0.008842267623170997,
+      "last_update": 1752335469.2186096
+    },
+    {
+      "bot_id": 44,
+      "current_equity": 113560.89598117012,
+      "total_pnl": 13560.895981170128,
+      "win_rate": 0.478,
+      "total_trades": 186,
+      "sharpe_ratio": 0.597677784534604,
+      "max_drawdown": 0.06749646641948254,
+      "last_update": 1752335476.306964
+    },
+    {
+      "bot_id": 39,
+      "current_equity": 112844.56797541693,
+      "total_pnl": 12844.567975416932,
+      "win_rate": 0.483,
+      "total_trades": 136,
+      "sharpe_ratio": -0.5433496749495235,
+      "max_drawdown": 0.2156671028990338,
+      "last_update": 1752335475.3766017
+    },
+    {
+      "bot_id": 41,
+      "current_equity": 112822.85072484496,
+      "total_pnl": 12822.850724844964,
+      "win_rate": 0.534,
+      "total_trades": 180,
+      "sharpe_ratio": 0.7399965954496093,
+      "max_drawdown": 0.023612509140379566,
+      "last_update": 1752335480.5534253
+    },
+    {
+      "bot_id": 28,
+      "current_equity": 112734.81385075784,
+      "total_pnl": 12734.813850757839,
+      "win_rate": 0.507,
+      "total_trades": 137,
+      "sharpe_ratio": 0.9584832909413707,
+      "max_drawdown": 0.16737782048481029,
+      "last_update": 1752335472.718771
+    },
+    {
+      "bot_id": 43,
+      "current_equity": 112609.06327533424,
+      "total_pnl": 12609.063275334234,
+      "win_rate": 0.493,
+      "total_trades": 171,
+      "sharpe_ratio": -0.5737453255812963,
+      "max_drawdown": 0.2541893799538336,
+      "last_update": 1752335483.9724414
+    },
+    {
+      "bot_id": 34,
+      "current_equity": 112584.91113704629,
+      "total_pnl": 12584.91113704629,
+      "win_rate": 0.511,
+      "total_trades": 178,
+      "sharpe_ratio": 2.42212275891488,
+      "max_drawdown": 0.1559698091807152,
+      "last_update": 1752335483.1285794
+    },
+    {
+      "bot_id": 18,
+      "current_equity": 112417.87101724572,
+      "total_pnl": 12417.87101724572,
+      "win_rate": 0.481,
+      "total_trades": 119,
+      "sharpe_ratio": 2.10477838350221,
+      "max_drawdown": 0.10972011175119686,
+      "last_update": 1752335469.2178361
+    },
+    {
+      "bot_id": 12,
+      "current_equity": 111885.77788898315,
+      "total_pnl": 11885.777888983152,
+      "win_rate": 0.499,
+      "total_trades": 75,
+      "sharpe_ratio": -0.12235830643247336,
+      "max_drawdown": 0.03749389390999588,
+      "last_update": 1752335465.6406362
+    },
+    {
+      "bot_id": 18,
+      "current_equity": 111673.20875855717,
+      "total_pnl": 11673.208758557172,
+      "win_rate": 0.5,
+      "total_trades": 179,
+      "sharpe_ratio": -0.186651184518003,
+      "max_drawdown": 0.012548081771735053,
+      "last_update": 1752335466.56541
+    }
+  ],
+  "fleet_summary": {
+    "total_bots": 1250,
+    "avg_return": 999.3907950820267,
+    "best_performer": {
+      "bot_id": 36,
+      "current_equity": 116856.58595001846,
+      "total_pnl": 16856.585950018452,
+      "win_rate": 0.485,
+      "total_trades": 153,
+      "sharpe_ratio": -0.11071265555816545,
+      "max_drawdown": 0.24891346671199088,
+      "last_update": 1752335478.961024
+    },
+    "timestamp": "2025-07-12T23:51:24.814572"
+  }
+}

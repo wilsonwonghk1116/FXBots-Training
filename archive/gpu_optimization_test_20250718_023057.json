@@ -1,0 +1,29 @@
+{
+  "test_type": "GPU Optimization Test",
+  "timestamp": "20250718_023057",
+  "duration": 2.977741241455078,
+  "total_operations": 1200,
+  "combined_ops_per_second": 4189.251385654277,
+  "workers": 2,
+  "successful_workers": 2,
+  "worker_results": [
+    {
+      "worker_id": 0,
+      "iterations": 200,
+      "total_operations": 600,
+      "operation_time": 0.28191089630126953,
+      "ops_per_second": 2128.3320647485666,
+      "allocated_gb": 0.0093994140625,
+      "status": "success"
+    },
+    {
+      "worker_id": 1,
+      "iterations": 200,
+      "total_operations": 600,
+      "operation_time": 0.29113221168518066,
+      "ops_per_second": 2060.9193209057103,
+      "allocated_gb": 0.0093994140625,
+      "status": "success"
+    }
+  ]
+}

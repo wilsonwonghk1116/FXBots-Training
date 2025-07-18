@@ -1,0 +1,590 @@
+{
+  "cluster_resources": {
+    "object_store_memory": 238000000000.0,
+    "node:192.168.0.238": 1.0,
+    "GPU": 2.0,
+    "node:__internal_head__": 1.0,
+    "CPU": 96.0,
+    "accelerator_type:G": 2.0,
+    "memory": 73291162624.0,
+    "node:192.168.1.11": 1.0
+  },
+  "available_resources": {
+    "accelerator_type:G": 2.0,
+    "node:192.168.0.238": 1.0,
+    "GPU": 2.0,
+    "memory": 73291162624.0,
+    "CPU": 96.0,
+    "node:__internal_head__": 1.0,
+    "object_store_memory": 238000000000.0,
+    "node:192.168.1.11": 1.0
+  },
+  "actors": [],
+  "nodes": [
+    {
+      "NodeID": "ce81afb004b2e1b3bb049b4b69fb9506e078f9081065dd5db245bb64",
+      "Alive": true,
+      "NodeManagerAddress": "192.168.1.11",
+      "NodeManagerHostname": "w2-N960Kx",
+      "NodeManagerPort": 44191,
+      "ObjectManagerPort": 35733,
+      "ObjectStoreSocketName": "/tmp/ray/session_2025-07-17_12-59-54_063426_915380/sockets/plasma_store",
+      "RayletSocketName": "/tmp/ray/session_2025-07-17_12-59-54_063426_915380/sockets/raylet",
+      "MetricsExportPort": 58135,
+      "NodeName": "192.168.1.11",
+      "RuntimeEnvAgentPort": 56194,
+      "DeathReason": 0,
+      "DeathReasonMessage": "",
+      "alive": true,
+      "Resources": {
+        "node:192.168.1.11": 1.0,
+        "object_store_memory": 48000000000.0,
+        "CPU": 16.0,
+        "GPU": 1.0,
+        "accelerator_type:G": 1.0,
+        "memory": 14599933952.0
+      },
+      "Labels": {
+        "ray.io/node_id": "ce81afb004b2e1b3bb049b4b69fb9506e078f9081065dd5db245bb64"
+      }
+    },
+    {
+      "NodeID": "318210ae1b26f3cde9012eb3f6e2e88f9f591454e4d27a2c14347dec",
+      "Alive": true,
+      "NodeManagerAddress": "192.168.0.238",
+      "NodeManagerHostname": "w1-Default-string",
+      "NodeManagerPort": 39113,
+      "ObjectManagerPort": 44651,
+      "ObjectStoreSocketName": "/tmp/ray/session_2025-07-17_12-59-54_063426_915380/sockets/plasma_store",
+      "RayletSocketName": "/tmp/ray/session_2025-07-17_12-59-54_063426_915380/sockets/raylet",
+      "MetricsExportPort": 65258,
+      "NodeName": "192.168.0.238",
+      "RuntimeEnvAgentPort": 55340,
+      "DeathReason": 0,
+      "DeathReasonMessage": "",
+      "alive": true,
+      "Resources": {
+        "CPU": 80.0,
+        "object_store_memory": 190000000000.0,
+        "node:192.168.0.238": 1.0,
+        "GPU": 1.0,
+        "accelerator_type:G": 1.0,
+        "memory": 58691228672.0,
+        "node:__internal_head__": 1.0
+      },
+      "Labels": {
+        "ray.io/node_id": "318210ae1b26f3cde9012eb3f6e2e88f9f591454e4d27a2c14347dec"
+      }
+    }
+  ],
+  "alive_nodes": 2,
+  "dead_nodes": 0,
+  "gpus": [
+    [
+      "NVIDIA GeForce RTX 3090",
+      9.330240885416668,
+      15.0
+    ]
+  ],
+  "cpu_count": 80,
+  "cpu_usage": 1.7,
+  "memory_usage": 9.1,
+  "ray_processes": [
+    {
+      "pid": 681738,
+      "name": "gcs_server",
+      "cmdline": "/home/w1/miniconda3/envs/BotsTraining_env/lib/python3.12/site-packages/ray/core/src/ray/gcs/gcs_server --log_dir=/tmp/ray/session_2025-07-17_11-10-04_263760_681709/logs --config_list=eyJvYmplY3Rfc3BpbGxpbmdfY29uZmlnIjogIntcInR5cGVcIjogXCJmaWxlc3lzdGVtXCIsIFwicGFyYW1zXCI6IHtcImRpcmVjdG9yeV9wYXRoXCI6IFwiL3RtcC9yYXkvc2Vzc2lvbl8yMDI1LTA3LTE3XzExLTEwLTA0XzI2Mzc2MF82ODE3MDlcIn19IiwgImlzX2V4dGVybmFsX3N0b3JhZ2VfdHlwZV9mcyI6IHRydWV9"
+    },
+    {
+      "pid": 915384,
+      "name": "gcs_server",
+      "cmdline": "/home/w1/miniconda3/envs/BotsTraining_env/lib/python3.12/site-packages/ray/core/src/ray/gcs/gcs_server --log_dir=/tmp/ray/session_2025-07-17_12-59-54_063426_915380/logs --config_list=eyJvYmplY3Rfc3BpbGxpbmdfY29uZmlnIjogIntcInR5cGVcIjogXCJmaWxlc3lzdGVtXCIsIFwicGFyYW1zXCI6IHtcImRpcmVjdG9yeV9wYXRoXCI6IFwiL3RtcC9yYXkvc2Vzc2lvbl8yMDI1LTA3LTE3XzEyLTU5LTU0XzA2MzQyNl85MTUzODBcIn19IiwgImlzX2V4dGVybmFsX3N0b3JhZ2VfdHlwZV9mcyI6IHRydWV9"
+    },
+    {
+      "pid": 915536,
+      "name": "python3.12",
+      "cmdline": "/home/w1/miniconda3/envs/BotsTraining_env/bin/python3.12 -u /home/w1/miniconda3/envs/BotsTraining_env/lib/python3.12/site-packages/ray/autoscaler/_private/monitor.py"
+    },
+    {
+      "pid": 915537,
+      "name": "python3.12",
+      "cmdline": "/home/w1/miniconda3/envs/BotsTraining_env/bin/python3.12 -m ray.util.client.server"
+    },
+    {
+      "pid": 915538,
+      "name": "python3.12",
+      "cmdline": "/home/w1/miniconda3/envs/BotsTraining_env/bin/python3.12 /home/w1/miniconda3/envs/BotsTraining_env/lib/python3.12/site-packages/ray/dashboard/dashboard.py --host=0.0.0.0"
+    },
+    {
+      "pid": 915657,
+      "name": "ray-dashboard-MetricsHead-0",
+      "cmdline": "ray-dashboard-MetricsHead-0 (/home/w1/miniconda3/envs/BotsTraining_env/bin/python3.12 -c"
+    },
+    {
+      "pid": 915658,
+      "name": "ray-dashboard-DataHead-0",
+      "cmdline": "ray-dashboard-DataHead-0 (/home/w1/miniconda3/envs/BotsTraining_env/bin/python3.12 -c"
+    },
+    {
+      "pid": 915659,
+      "name": "ray-dashboard-EventHead-0",
+      "cmdline": "ray-dashboard-EventHead-0 (/home/w1/miniconda3/envs/BotsTraining_env/bin/python3.12 -c"
+    },
+    {
+      "pid": 915660,
+      "name": "ray-dashboard-JobHead-0",
+      "cmdline": "ray-dashboard-JobHead-0 (/home/w1/miniconda3/envs/BotsTraining_env/bin/python3.12 -c"
+    },
+    {
+      "pid": 915661,
+      "name": "ray-dashboard-NodeHead-0",
+      "cmdline": "ray-dashboard-NodeHead-0 (/home/w1/miniconda3/envs/BotsTraining_env/bin/python3.12 -c"
+    },
+    {
+      "pid": 915662,
+      "name": "ray-dashboard-ReportHead-0",
+      "cmdline": "ray-dashboard-ReportHead-0 (/home/w1/miniconda3/envs/BotsTraining_env/bin/python3.12 -c"
+    },
+    {
+      "pid": 915663,
+      "name": "ray-dashboard-ServeHead-0",
+      "cmdline": "ray-dashboard-ServeHead-0 (/home/w1/miniconda3/envs/BotsTraining_env/bin/python3.12 -c"
+    },
+    {
+      "pid": 915664,
+      "name": "ray-dashboard-StateHead-0",
+      "cmdline": "ray-dashboard-StateHead-0 (/home/w1/miniconda3/envs/BotsTraining_env/bin/python3.12 -c"
+    },
+    {
+      "pid": 915665,
+      "name": "ray-dashboard-TrainHead-0",
+      "cmdline": "ray-dashboard-TrainHead-0 (/home/w1/miniconda3/envs/BotsTraining_env/bin/python3.12 -c"
+    },
+    {
+      "pid": 916153,
+      "name": "raylet",
+      "cmdline": "/home/w1/miniconda3/envs/BotsTraining_env/lib/python3.12/site-packages/ray/core/src/ray/raylet/raylet --raylet_socket_name=/tmp/ray/session_2025-07-17_12-59-54_063426_915380/sockets/raylet --store_socket_name=/tmp/ray/session_2025-07-17_12-59-54_063426_915380/sockets/plasma_store"
+    },
+    {
+      "pid": 916154,
+      "name": "python3.12",
+      "cmdline": "/home/w1/miniconda3/envs/BotsTraining_env/bin/python3.12 -u /home/w1/miniconda3/envs/BotsTraining_env/lib/python3.12/site-packages/ray/_private/log_monitor.py"
+    },
+    {
+      "pid": 916229,
+      "name": "python3.12",
+      "cmdline": "/home/w1/miniconda3/envs/BotsTraining_env/bin/python3.12 -u /home/w1/miniconda3/envs/BotsTraining_env/lib/python3.12/site-packages/ray/dashboard/agent.py"
+    },
+    {
+      "pid": 916231,
+      "name": "python3.12",
+      "cmdline": "/home/w1/miniconda3/envs/BotsTraining_env/bin/python3.12 -u /home/w1/miniconda3/envs/BotsTraining_env/lib/python3.12/site-packages/ray/_private/runtime_env/agent/main.py"
+    },
+    {
+      "pid": 945334,
+      "name": "python",
+      "cmdline": "python ray_cluster_deep_diagnostic.py"
+    },
+    {
+      "pid": 945803,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945807,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945811,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945815,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945820,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945825,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945829,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945833,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945837,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945841,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945846,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945850,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945854,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945858,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945863,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945867,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945882,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945886,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945890,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945895,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945899,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945904,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945909,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945914,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945918,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945923,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945927,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945932,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945936,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945941,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945946,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945950,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945955,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945959,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945964,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945969,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945974,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945985,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945989,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945992,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 945996,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946001,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946005,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946009,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946013,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946017,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946021,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946025,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946029,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946033,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946038,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946042,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946046,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946050,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946055,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946059,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946063,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946067,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946071,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946075,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946080,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946084,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946088,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946092,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946097,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946103,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946136,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946170,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946196,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946207,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946240,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946270,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946282,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946316,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946347,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946493,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946529,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946536,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946591,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    },
+    {
+      "pid": 946628,
+      "name": "ray::IDLE",
+      "cmdline": "ray::IDLE  "
+    }
+  ],
+  "issues": []
+}

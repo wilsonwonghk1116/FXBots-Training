@@ -1,0 +1,18 @@
+{
+  "summary": {
+    "total_time": 60.61101722717285,
+    "total_iterations": 19136,
+    "successful_workers": 1,
+    "iterations_per_second": 315.71817922602094
+  },
+  "worker_results": [
+    {
+      "worker_id": 0,
+      "duration_minutes": 1,
+      "total_iterations": 19136,
+      "total_time": 60.000160694122314,
+      "avg_operation_time": 0.00287813888893877,
+      "status": "success"
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Setup Project Repository and Environment",
+        "description": "Initialize Git repository, establish branching strategy, and configure Python 3.8+ environment with dependency management for RTX 3090 and dual Xeon CPUs.",
+        "details": "- Use Git with GitHub/GitLab, set up main/dev branches.\n- Create Python 3.8+ virtual environment using venv or conda.\n- Add requirements.txt or environment.yml with PyTorch (latest, CUDA 12+), Ray, YAML, pytest, and monitoring libraries (nvidia-ml-py3, psutil).\n- Ensure CUDA 12+ and cuDNN are installed for RTX 3090 compatibility.\n- Document setup in README.md.",
+        "testStrategy": "Verify environment setup by running 'python -c \"import torch; print(torch.cuda.is_available())\"' and basic Git operations.",
+        "priority": "high",
+        "dependencies": [],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 2,
+        "title": "Implement Modular Codebase Structure",
+        "description": "Design and scaffold modular architecture with clear separation for environment, model, trainer, and utilities.",
+        "details": "- Create Python packages: environment/, models/, trainer/, utils/.\n- Use abstract base classes for extensibility.\n- Follow PEP8 and modern Python packaging standards.\n- Add __init__.py and module docstrings.",
+        "testStrategy": "Run pytest to ensure modules import correctly and basic instantiation works.",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 3,
+        "title": "Develop YAML-based Configuration Management",
+        "description": "Implement a robust YAML configuration system for all modules and hyperparameters.",
+        "details": "- Use PyYAML for parsing.\n- Support hierarchical configs (default + override).\n- Validate configs with schema (e.g., using Cerberus or pydantic).\n- Document all config options.",
+        "testStrategy": "Unit tests for config loading, validation, and error handling with sample YAML files.",
+        "priority": "high",
+        "dependencies": [
+          2
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 4,
+        "title": "Build Advanced Neural Network Architecture",
+        "description": "Implement multi-layer LSTM with self-attention for trading intelligence, optimized for GPU.",
+        "details": "- Use PyTorch nn.LSTM and nn.MultiheadAttention.\n- Design for large batch sizes and sequence lengths.\n- Integrate mixed precision (torch.cuda.amp) for FP16/FP32.\n- Profile VRAM usage with torch.cuda.memory_allocated().\n- Use FlashAttention (if compatible) for further speedup.",
+        "testStrategy": "Unit tests for forward/backward pass, VRAM profiling, and output shapes. Benchmark with synthetic data.",
+        "priority": "high",
+        "dependencies": [
+          2,
+          3
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 5,
+        "title": "Implement Smart Forex Trading Environment",
+        "description": "Create a high-performance trading environment simulating multi-currency, multi-timeframe Forex markets.",
+        "details": "- Use vectorized NumPy/Pandas for data processing.\n- Support multiple currency pairs and timeframes.\n- Integrate real-time market regime detection (trending, ranging, volatile) using statistical indicators.\n- Provide Gym-like API for agent interaction.",
+        "testStrategy": "Unit tests for environment reset/step, regime detection accuracy, and data integrity.",
+        "priority": "high",
+        "dependencies": [
+          2,
+          3
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 6,
+        "title": "Design Evolutionary Training System",
+        "description": "Develop a scalable evolutionary algorithm for parallel training and evaluation of 300 bots.",
+        "details": "- Use Ray for parallelism and future cluster scaling.\n- Implement population management, selection, mutation, and crossover.\n- Support checkpointing and recovery.\n- Optimize for CPU/GPU resource allocation.",
+        "testStrategy": "Integration tests for population evolution, checkpointing, and parallel execution. Validate with 300+ agents.",
+        "priority": "high",
+        "dependencies": [
+          4,
+          5
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 7,
+        "title": "Integrate Real-time Resource Monitoring",
+        "description": "Implement real-time monitoring for GPU, VRAM, CPU, and thermal metrics with alerting.",
+        "details": "- Use nvidia-ml-py3 for GPU/VRAM/temperature.\n- Use psutil for CPU and memory.\n- Log metrics to file and expose via REST API (FastAPI).\n- Set thresholds for alerts (e.g., 95% VRAM, 80°C GPU).",
+        "testStrategy": "Simulate high load and verify metrics collection, logging, and alert triggering.",
+        "priority": "high",
+        "dependencies": [
+          1,
+          2
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 8,
+        "title": "Optimize RTX 3090 Hardware Utilization",
+        "description": "Tune training loop and memory management for 95%+ VRAM and GPU usage, leveraging Ampere features.",
+        "details": "- Use torch.cuda.amp for mixed precision.\n- Aggressively tune batch sizes and sequence lengths.\n- Profile with torch.profiler and nvidia-smi.\n- Implement garbage collection and memory pinning.\n- Monitor and adjust power/thermal limits (nvidia-smi, see [1]).",
+        "testStrategy": "Run training with synthetic and real data, confirm 95%+ VRAM/GPU usage via nvidia-smi and logs.",
+        "priority": "high",
+        "dependencies": [
+          4,
+          6,
+          7
+        ],
+        "status": "in-progress",
+        "subtasks": []
+      },
+      {
+        "id": 9,
+        "title": "Implement Risk Assessment and Position Sizing",
+        "description": "Add real-time risk scoring and dynamic position sizing to agent decision process.",
+        "details": "- Integrate risk models (e.g., Value-at-Risk, volatility-based sizing).\n- Expose risk metrics to agent and logging.\n- Ensure compatibility with multi-timeframe analysis.",
+        "testStrategy": "Unit tests for risk calculations, integration tests for agent decisions under varying risk scenarios.",
+        "priority": "medium",
+        "dependencies": [
+          4,
+          5,
+          6
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 10,
+        "title": "Develop Confidence Scoring and Prediction Reliability",
+        "description": "Implement confidence scoring for model predictions to inform trading decisions.",
+        "details": "- Use softmax probabilities, entropy, or Bayesian dropout for uncertainty estimation.\n- Log confidence scores with each trade.\n- Integrate into agent's action selection logic.",
+        "testStrategy": "Unit tests for confidence computation, integration tests for trade filtering based on confidence.",
+        "priority": "medium",
+        "dependencies": [
+          4,
+          6
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 11,
+        "title": "Establish Comprehensive Testing Suite",
+        "description": "Create unit, integration, and performance tests for all modules, targeting 90%+ code coverage.",
+        "details": "- Use pytest and coverage.py.\n- Write tests for edge cases, error handling, and performance.\n- Integrate with CI pipeline for automated test runs.",
+        "testStrategy": "Run coverage reports, enforce 90%+ coverage, and validate test pass rates.",
+        "priority": "high",
+        "dependencies": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 12,
+        "title": "Implement CI/CD Pipeline",
+        "description": "Set up automated testing, linting, and deployment workflow for rapid iteration and reliability.",
+        "details": "- Use GitHub Actions or GitLab CI.\n- Automate linting (flake8, black), testing, and Docker builds.\n- Deploy to staging environment on merge to main branch.\n- Integrate with code coverage and alerting.",
+        "testStrategy": "Push code changes and verify pipeline runs, test/lint pass, and deployment triggers.",
+        "priority": "high",
+        "dependencies": [
+          1,
+          11
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 13,
+        "title": "Develop Real-time Performance Dashboard",
+        "description": "Create a dashboard for monitoring resource usage and trading performance metrics.",
+        "details": "- Use FastAPI backend with WebSocket for real-time updates.\n- Frontend with React.js or Streamlit for rapid prototyping.\n- Display GPU/CPU/VRAM, trading stats, and alerts.\n- Support historical data visualization.",
+        "testStrategy": "Manual and automated UI tests for dashboard responsiveness, accuracy, and alert display.",
+        "priority": "medium",
+        "dependencies": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 14,
+        "title": "Prepare for Distributed Ray Cluster Scaling",
+        "description": "Refactor training and environment modules for Ray cluster compatibility and multi-node coordination.",
+        "details": "- Use Ray's Actor and Remote APIs.\n- Implement load balancing and fault tolerance.\n- Test with secondary node (i9 + RTX 3060).\n- Document cluster setup and scaling procedures.",
+        "testStrategy": "Integration tests with multi-node setup, simulate node failures, and verify recovery.",
+        "priority": "medium",
+        "dependencies": [
+          6,
+          8,
+          11
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 15,
+        "title": "Write Technical Documentation and User Guides",
+        "description": "Produce comprehensive documentation, API references, and user guides for developers and users.",
+        "details": "- Use Sphinx or MkDocs for API docs.\n- Include setup, configuration, usage, and troubleshooting sections.\n- Document all public APIs and configuration options.\n- Provide example workflows and best practices.",
+        "testStrategy": "Manual review for completeness, clarity, and accuracy. Validate with new user onboarding.",
+        "priority": "medium",
+        "dependencies": [
+          11,
+          12,
+          13,
+          14
+        ],
+        "status": "pending",
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "created": "2025-07-11T09:54:36.953Z",
+      "updated": "2025-07-11T09:56:00.044Z",
+      "description": "Tasks for master context"
+    }
+  }
+}

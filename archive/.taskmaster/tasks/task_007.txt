@@ -1,0 +1,14 @@
+# Task ID: 7
+# Title: Integrate Real-time Resource Monitoring
+# Status: pending
+# Dependencies: 1, 2
+# Priority: high
+# Description: Implement real-time monitoring for GPU, VRAM, CPU, and thermal metrics with alerting.
+# Details:
+- Use nvidia-ml-py3 for GPU/VRAM/temperature.
+- Use psutil for CPU and memory.
+- Log metrics to file and expose via REST API (FastAPI).
+- Set thresholds for alerts (e.g., 95% VRAM, 80°C GPU).
+
+# Test Strategy:
+Simulate high load and verify metrics collection, logging, and alert triggering.

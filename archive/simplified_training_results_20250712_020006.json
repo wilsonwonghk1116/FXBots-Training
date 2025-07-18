@@ -1,0 +1,384 @@
+{
+  "training_summary": {
+    "population_size": 15,
+    "generations": 20,
+    "device": "cuda",
+    "timestamp": "20250712_020006"
+  },
+  "best_final_result": {
+    "final_balance": 100000.0,
+    "total_reward": -88.0,
+    "total_trades": 0,
+    "actions": {
+      "HOLD": 176,
+      "BUY": 0,
+      "SELL": 0
+    },
+    "profit_loss": 0.0,
+    "bot_id": 0
+  },
+  "generation_progress": [
+    {
+      "generation": 1,
+      "best_balance": 100000.0,
+      "best_trades": 0,
+      "avg_balance": 100000.0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 5537,
+        "BUY": 0,
+        "SELL": 0
+      }
+    },
+    {
+      "generation": 2,
+      "best_balance": 100000.0,
+      "best_trades": 0,
+      "avg_balance": 100000.0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 6029,
+        "BUY": 0,
+        "SELL": 0
+      }
+    },
+    {
+      "generation": 3,
+      "best_balance": 100000.0,
+      "best_trades": 0,
+      "avg_balance": 100000.0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 5990,
+        "BUY": 0,
+        "SELL": 0
+      }
+    },
+    {
+      "generation": 4,
+      "best_balance": 100000.0,
+      "best_trades": 0,
+      "avg_balance": 100000.0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 6768,
+        "BUY": 0,
+        "SELL": 0
+      }
+    },
+    {
+      "generation": 5,
+      "best_balance": 100000.0,
+      "best_trades": 0,
+      "avg_balance": 100000.0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 5468,
+        "BUY": 0,
+        "SELL": 0
+      }
+    },
+    {
+      "generation": 6,
+      "best_balance": 100000.0,
+      "best_trades": 0,
+      "avg_balance": 100000.0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 4835,
+        "BUY": 0,
+        "SELL": 0
+      }
+    },
+    {
+      "generation": 7,
+      "best_balance": 100000.0,
+      "best_trades": 0,
+      "avg_balance": 100000.0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 5177,
+        "BUY": 0,
+        "SELL": 0
+      }
+    },
+    {
+      "generation": 8,
+      "best_balance": 100000.0,
+      "best_trades": 0,
+      "avg_balance": 100000.0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 5929,
+        "BUY": 0,
+        "SELL": 0
+      }
+    },
+    {
+      "generation": 9,
+      "best_balance": 100000.0,
+      "best_trades": 0,
+      "avg_balance": 100000.0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 6540,
+        "BUY": 0,
+        "SELL": 0
+      }
+    },
+    {
+      "generation": 10,
+      "best_balance": 100000.0,
+      "best_trades": 0,
+      "avg_balance": 100000.0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 6687,
+        "BUY": 0,
+        "SELL": 0
+      }
+    },
+    {
+      "generation": 11,
+      "best_balance": 100000.0,
+      "best_trades": 0,
+      "avg_balance": 100000.0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 5491,
+        "BUY": 0,
+        "SELL": 0
+      }
+    },
+    {
+      "generation": 12,
+      "best_balance": 100000.0,
+      "best_trades": 0,
+      "avg_balance": 100000.0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 5332,
+        "BUY": 0,
+        "SELL": 0
+      }
+    },
+    {
+      "generation": 13,
+      "best_balance": 100000.0,
+      "best_trades": 0,
+      "avg_balance": 100000.0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 5763,
+        "BUY": 0,
+        "SELL": 0
+      }
+    },
+    {
+      "generation": 14,
+      "best_balance": 100000.0,
+      "best_trades": 0,
+      "avg_balance": 100000.0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 4776,
+        "BUY": 0,
+        "SELL": 0
+      }
+    },
+    {
+      "generation": 15,
+      "best_balance": 100000.0,
+      "best_trades": 0,
+      "avg_balance": 100000.0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 5049,
+        "BUY": 0,
+        "SELL": 0
+      }
+    },
+    {
+      "generation": 16,
+      "best_balance": 100000.0,
+      "best_trades": 0,
+      "avg_balance": 100000.0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 4074,
+        "BUY": 0,
+        "SELL": 0
+      }
+    },
+    {
+      "generation": 17,
+      "best_balance": 100000.0,
+      "best_trades": 0,
+      "avg_balance": 100000.0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 6659,
+        "BUY": 0,
+        "SELL": 0
+      }
+    },
+    {
+      "generation": 18,
+      "best_balance": 100000.0,
+      "best_trades": 0,
+      "avg_balance": 100000.0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 6370,
+        "BUY": 0,
+        "SELL": 0
+      }
+    },
+    {
+      "generation": 19,
+      "best_balance": 100000.0,
+      "best_trades": 0,
+      "avg_balance": 100000.0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 6267,
+        "BUY": 0,
+        "SELL": 0
+      }
+    },
+    {
+      "generation": 20,
+      "best_balance": 100000.0,
+      "best_trades": 0,
+      "avg_balance": 100000.0,
+      "avg_trades": 0.0,
+      "actions": {
+        "HOLD": 6622,
+        "BUY": 0,
+        "SELL": 0
+      }
+    }
+  ],
+  "all_final_results": [
+    {
+      "final_balance": 100000.0,
+      "total_reward": -88.0,
+      "total_trades": 0,
+      "actions": {
+        "HOLD": 176,
+        "BUY": 0,
+        "SELL": 0
+      },
+      "profit_loss": 0.0,
+      "bot_id": 0
+    },
+    {
+      "final_balance": 100000.0,
+      "total_reward": -4594.5,
+      "total_trades": 0,
+      "actions": {
+        "HOLD": 289,
+        "BUY": 0,
+        "SELL": 0
+      },
+      "profit_loss": 0.0,
+      "bot_id": 1
+    },
+    {
+      "final_balance": 100000.0,
+      "total_reward": -18.5,
+      "total_trades": 0,
+      "actions": {
+        "HOLD": 37,
+        "BUY": 0,
+        "SELL": 0
+      },
+      "profit_loss": 0.0,
+      "bot_id": 2
+    },
+    {
+      "final_balance": 100000.0,
+      "total_reward": -5655.0,
+      "total_trades": 0,
+      "actions": {
+        "HOLD": 310,
+        "BUY": 0,
+        "SELL": 0
+      },
+      "profit_loss": 0.0,
+      "bot_id": 3
+    },
+    {
+      "final_balance": 100000.0,
+      "total_reward": -12.0,
+      "total_trades": 0,
+      "actions": {
+        "HOLD": 24,
+        "BUY": 0,
+        "SELL": 0
+      },
+      "profit_loss": 0.0,
+      "bot_id": 4
+    },
+    {
+      "final_balance": 100000.0,
+      "total_reward": -15250.0,
+      "total_trades": 0,
+      "actions": {
+        "HOLD": 500,
+        "BUY": 0,
+        "SELL": 0
+      },
+      "profit_loss": 0.0,
+      "bot_id": 5
+    },
+    {
+      "final_balance": 100000.0,
+      "total_reward": -27.5,
+      "total_trades": 0,
+      "actions": {
+        "HOLD": 55,
+        "BUY": 0,
+        "SELL": 0
+      },
+      "profit_loss": 0.0,
+      "bot_id": 6
+    },
+    {
+      "final_balance": 100000.0,
+      "total_reward": -9543.5,
+      "total_trades": 0,
+      "actions": {
+        "HOLD": 387,
+        "BUY": 0,
+        "SELL": 0
+      },
+      "profit_loss": 0.0,
+      "bot_id": 7
+    },
+    {
+      "final_balance": 100000.0,
+      "total_reward": -6311.5,
+      "total_trades": 0,
+      "actions": {
+        "HOLD": 323,
+        "BUY": 0,
+        "SELL": 0
+      },
+      "profit_loss": 0.0,
+      "bot_id": 8
+    },
+    {
+      "final_balance": 100000.0,
+      "total_reward": -17.5,
+      "total_trades": 0,
+      "actions": {
+        "HOLD": 35,
+        "BUY": 0,
+        "SELL": 0
+      },
+      "profit_loss": 0.0,
+      "bot_id": 9
+    }
+  ]
+}

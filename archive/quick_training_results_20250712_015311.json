@@ -1,0 +1,186 @@
+{
+  "final_results": {
+    "total_reward": 605.5036630537894,
+    "total_trades": 41,
+    "final_balance": 100006.05503663053,
+    "actions_taken": {
+      "HOLD": 1,
+      "BUY": 56,
+      "SELL": 98
+    },
+    "bot_id": 11
+  },
+  "generation_stats": [
+    {
+      "generation": 1,
+      "best_balance": 100009.04401389907,
+      "avg_balance": 100000.84103681288,
+      "best_trades": 176,
+      "actions": {
+        "HOLD": 885,
+        "BUY": 533,
+        "SELL": 658
+      }
+    },
+    {
+      "generation": 2,
+      "best_balance": 100005.99683424935,
+      "avg_balance": 100004.05309296408,
+      "best_trades": 52,
+      "actions": {
+        "HOLD": 236,
+        "BUY": 325,
+        "SELL": 118
+      }
+    },
+    {
+      "generation": 3,
+      "best_balance": 100010.78631429048,
+      "avg_balance": 100001.37375904612,
+      "best_trades": 74,
+      "actions": {
+        "HOLD": 815,
+        "BUY": 1258,
+        "SELL": 561
+      }
+    },
+    {
+      "generation": 4,
+      "best_balance": 100007.52224881905,
+      "avg_balance": 100004.62245275716,
+      "best_trades": 78,
+      "actions": {
+        "HOLD": 148,
+        "BUY": 293,
+        "SELL": 661
+      }
+    },
+    {
+      "generation": 5,
+      "best_balance": 100005.00473592019,
+      "avg_balance": 100003.97530492287,
+      "best_trades": 0,
+      "actions": {
+        "HOLD": 248,
+        "BUY": 496,
+        "SELL": 454
+      }
+    },
+    {
+      "generation": 6,
+      "best_balance": 100006.16945756548,
+      "avg_balance": 100004.31401732558,
+      "best_trades": 76,
+      "actions": {
+        "HOLD": 38,
+        "BUY": 369,
+        "SELL": 806
+      }
+    },
+    {
+      "generation": 7,
+      "best_balance": 100005.46189283369,
+      "avg_balance": 100004.79636611041,
+      "best_trades": 68,
+      "actions": {
+        "HOLD": 57,
+        "BUY": 211,
+        "SELL": 412
+      }
+    },
+    {
+      "generation": 8,
+      "best_balance": 100006.2008906234,
+      "avg_balance": 100004.76521411902,
+      "best_trades": 86,
+      "actions": {
+        "HOLD": 19,
+        "BUY": 394,
+        "SELL": 814
+      }
+    },
+    {
+      "generation": 9,
+      "best_balance": 100005.49222448499,
+      "avg_balance": 100004.13075677746,
+      "best_trades": 8,
+      "actions": {
+        "HOLD": 9,
+        "BUY": 514,
+        "SELL": 629
+      }
+    },
+    {
+      "generation": 10,
+      "best_balance": 100006.84680915314,
+      "avg_balance": 100004.48964672144,
+      "best_trades": 64,
+      "actions": {
+        "HOLD": 45,
+        "BUY": 434,
+        "SELL": 1748
+      }
+    },
+    {
+      "generation": 11,
+      "best_balance": 100006.59376255574,
+      "avg_balance": 100005.01289330477,
+      "best_trades": 6,
+      "actions": {
+        "HOLD": 5,
+        "BUY": 121,
+        "SELL": 206
+      }
+    },
+    {
+      "generation": 12,
+      "best_balance": 100006.03896670474,
+      "avg_balance": 100004.80201069353,
+      "best_trades": 9,
+      "actions": {
+        "HOLD": 23,
+        "BUY": 461,
+        "SELL": 1362
+      }
+    },
+    {
+      "generation": 13,
+      "best_balance": 100006.56457383471,
+      "avg_balance": 100004.95431054782,
+      "best_trades": 70,
+      "actions": {
+        "HOLD": 12,
+        "BUY": 373,
+        "SELL": 718
+      }
+    },
+    {
+      "generation": 14,
+      "best_balance": 100006.22239701869,
+      "avg_balance": 100004.99900085681,
+      "best_trades": 91,
+      "actions": {
+        "HOLD": 18,
+        "BUY": 328,
+        "SELL": 668
+      }
+    },
+    {
+      "generation": 15,
+      "best_balance": 100005.97632824599,
+      "avg_balance": 100004.84248720792,
+      "best_trades": 114,
+      "actions": {
+        "HOLD": 35,
+        "BUY": 731,
+        "SELL": 1637
+      }
+    }
+  ],
+  "summary": {
+    "best_final_balance": 100006.05503663053,
+    "improvement": 6.055036630525137,
+    "total_generations": 15,
+    "timestamp": "2025-07-12T01:53:11.159636"
+  }
+}

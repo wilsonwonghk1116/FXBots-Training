@@ -1,0 +1,186 @@
+{
+  "final_results": {
+    "total_reward": 973.2207918668032,
+    "total_trades": 116,
+    "final_balance": 100009.73220791861,
+    "actions_taken": {
+      "HOLD": 3,
+      "BUY": 369,
+      "SELL": 76
+    },
+    "bot_id": 14
+  },
+  "generation_stats": [
+    {
+      "generation": 1,
+      "best_balance": 100005.00092858223,
+      "avg_balance": 100001.30117479066,
+      "best_trades": 0,
+      "actions": {
+        "HOLD": 315,
+        "BUY": 540,
+        "SELL": 275
+      }
+    },
+    {
+      "generation": 2,
+      "best_balance": 100006.07368332775,
+      "avg_balance": 100002.47491566784,
+      "best_trades": 4,
+      "actions": {
+        "HOLD": 563,
+        "BUY": 136,
+        "SELL": 1157
+      }
+    },
+    {
+      "generation": 3,
+      "best_balance": 100005.31336125464,
+      "avg_balance": 100003.573629594,
+      "best_trades": 14,
+      "actions": {
+        "HOLD": 181,
+        "BUY": 95,
+        "SELL": 699
+      }
+    },
+    {
+      "generation": 4,
+      "best_balance": 100011.81671408161,
+      "avg_balance": 100004.31021393632,
+      "best_trades": 192,
+      "actions": {
+        "HOLD": 120,
+        "BUY": 426,
+        "SELL": 557
+      }
+    },
+    {
+      "generation": 5,
+      "best_balance": 100008.53830056645,
+      "avg_balance": 100004.63028399709,
+      "best_trades": 180,
+      "actions": {
+        "HOLD": 101,
+        "BUY": 320,
+        "SELL": 251
+      }
+    },
+    {
+      "generation": 6,
+      "best_balance": 100008.76336403657,
+      "avg_balance": 100004.12483637709,
+      "best_trades": 35,
+      "actions": {
+        "HOLD": 135,
+        "BUY": 208,
+        "SELL": 55
+      }
+    },
+    {
+      "generation": 7,
+      "best_balance": 100005.00304056042,
+      "avg_balance": 100003.52333851252,
+      "best_trades": 0,
+      "actions": {
+        "HOLD": 224,
+        "BUY": 271,
+        "SELL": 751
+      }
+    },
+    {
+      "generation": 8,
+      "best_balance": 100009.05685267058,
+      "avg_balance": 100004.32440309446,
+      "best_trades": 88,
+      "actions": {
+        "HOLD": 132,
+        "BUY": 653,
+        "SELL": 657
+      }
+    },
+    {
+      "generation": 9,
+      "best_balance": 100010.37975655054,
+      "avg_balance": 100004.62931158059,
+      "best_trades": 204,
+      "actions": {
+        "HOLD": 98,
+        "BUY": 724,
+        "SELL": 460
+      }
+    },
+    {
+      "generation": 10,
+      "best_balance": 100009.53830217314,
+      "avg_balance": 100005.15937929267,
+      "best_trades": 108,
+      "actions": {
+        "HOLD": 132,
+        "BUY": 1224,
+        "SELL": 591
+      }
+    },
+    {
+      "generation": 11,
+      "best_balance": 100014.32250860978,
+      "avg_balance": 100005.22625571063,
+      "best_trades": 364,
+      "actions": {
+        "HOLD": 49,
+        "BUY": 833,
+        "SELL": 530
+      }
+    },
+    {
+      "generation": 12,
+      "best_balance": 100010.09559405765,
+      "avg_balance": 100005.59577948187,
+      "best_trades": 104,
+      "actions": {
+        "HOLD": 12,
+        "BUY": 844,
+        "SELL": 221
+      }
+    },
+    {
+      "generation": 13,
+      "best_balance": 100010.93273096632,
+      "avg_balance": 100006.44504084888,
+      "best_trades": 98,
+      "actions": {
+        "HOLD": 12,
+        "BUY": 2031,
+        "SELL": 483
+      }
+    },
+    {
+      "generation": 14,
+      "best_balance": 100008.89093253913,
+      "avg_balance": 100005.13284553637,
+      "best_trades": 150,
+      "actions": {
+        "HOLD": 3,
+        "BUY": 824,
+        "SELL": 138
+      }
+    },
+    {
+      "generation": 15,
+      "best_balance": 100005.58726882933,
+      "avg_balance": 100004.89020345779,
+      "best_trades": 2,
+      "actions": {
+        "HOLD": 0,
+        "BUY": 178,
+        "SELL": 31
+      }
+    }
+  ],
+  "summary": {
+    "best_final_balance": 100009.73220791861,
+    "improvement": 9.732207918612403,
+    "total_generations": 15,
+    "timestamp": "2025-07-12T01:51:08.522079"
+  }
+}

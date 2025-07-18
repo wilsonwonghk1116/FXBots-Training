@@ -1,0 +1,13 @@
+# Task ID: 10
+# Title: Develop Confidence Scoring and Prediction Reliability
+# Status: pending
+# Dependencies: 4, 6
+# Priority: medium
+# Description: Implement confidence scoring for model predictions to inform trading decisions.
+# Details:
+- Use softmax probabilities, entropy, or Bayesian dropout for uncertainty estimation.
+- Log confidence scores with each trade.
+- Integrate into agent's action selection logic.
+
+# Test Strategy:
+Unit tests for confidence computation, integration tests for trade filtering based on confidence.
