@@ -3,6 +3,9 @@ VRAMOptimizedTrainer: Genetic algorithm-based trainer for RL bots.
 """
 
 from typing import List, Dict
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from src.env import SmartForexEnvironment
 from src.model import SmartTradingBot
 import torch
@@ -37,16 +40,37 @@ class VRAMOptimizedTrainer:
         self.env_pool = [SmartForexEnvironment() for _ in range(self.num_workers)]
         self.env = SmartForexEnvironment()
         logger.info(f"Initialized trainer with population_size={self.population_size}")
+        logger.info(f"=== Smart Real Training System Started ===")
+        logger.info(f"Targeting {self.target_vram_percent:.0%} VRAM utilization on {torch.cuda.get_device_name(0)}")
+        self.batch_size = 256  # Initial batch size
+        self.min_batch_size = 32
+        self.max_batch_size = 1024
 
     def create_population(self) -> List[SmartTradingBot]:
         logger.info(f"Creating population of {self.population_size} bots on {self.device}...")
         return [SmartTradingBot().to(self.device) for _ in range(self.population_size)]
 
     def evaluate_population(self, population: List[SmartTradingBot]) -> List[Dict]:
-        """Evaluate entire population with detailed metrics using multiprocessing."""
-        with multiprocessing.Pool(self.num_workers) as pool:
-            envs = [SmartForexEnvironment() for _ in range(len(population))]
-            results = pool.starmap(_evaluate_bot, [(bot, env, 1000) for bot, env in zip(population, envs)])
+        """Evaluate entire population with dynamic batch sizing."""
+        gpu_info = GPUtil.getGPUs()[0]
+        vram_usage = gpu_info.memoryUsed / gpu_info.memoryTotal
+        
+        # Dynamic batch size adjustment
+        if vram_usage < self.target_vram_percent - 0.1:
+            self.batch_size = min(self.batch_size * 2, self.max_batch_size)
+            logger.warning(f"Increasing batch size to {self.batch_size} for better VRAM utilization")
+        elif vram_usage > self.target_vram_percent:
+            self.batch_size = max(self.batch_size // 2, self.min_batch_size)
+            logger.warning(f"Reducing batch size to {self.batch_size} to avoid OOM")
+            
+        # Split population into batches
+        results = []
+        for i in range(0, len(population), self.batch_size):
+            batch = population[i:i+self.batch_size]
+            with multiprocessing.Pool(self.num_workers) as pool:
+                envs = [SmartForexEnvironment() for _ in range(len(batch))]
+                batch_results = pool.starmap(_evaluate_bot, [(bot, env, 1000) for bot, env in zip(batch, envs)])
+                results.extend(batch_results)
         for i, metrics in enumerate(results):
             metrics['bot_id'] = i
         return sorted(results, key=lambda x: x['final_balance'], reverse=True)

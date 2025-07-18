@@ -7,6 +7,7 @@ import numpy as np
 import pandas as pd
 import random
 import logging
+import time
 from gymnasium import spaces
 import gymnasium as gym
 import os
@@ -36,9 +37,19 @@ class SmartForexEnvironment(gym.Env):
         self.idle_penalty_threshold = 1000  # Steps before idle penalty
         self.max_leverage = 100  # 100x leverage allowed
         
-        self.data = self._load_data(data_file)
+        # 加载完整OHLCV数据
+        raw_data = self._load_full_data(data_file)
+        self.data = raw_data['close']
+        self.high_data = raw_data['high']
+        self.low_data = raw_data['low'] 
+        self.volume_data = raw_data['volume']
+        
         if len(self.data) == 0:
-            self.data = self._generate_synthetic_data()
+            synthetic = self._generate_synthetic_data()
+            self.data = synthetic
+            self.high_data = synthetic * 1.001
+            self.low_data = synthetic * 0.999
+            self.volume_data = np.random.randint(100, 10000, len(synthetic))
         self.set_difficulty(self.difficulty)
         self.trading_cost = 0.0002
         self.stop_loss_pips = 30
@@ -77,24 +88,29 @@ class SmartForexEnvironment(gym.Env):
         self.action_space = spaces.Discrete(3)
         self.reset()
 
-    def _load_data(self, data_file: str) -> np.ndarray:
-        """Load forex data from CSV file, robust to column name issues"""
+    def _load_full_data(self, data_file: str) -> dict:
+        """Load OHLCV data from CSV file"""
+        default_data = {
+            'close': np.array([]),
+            'high': np.array([]),
+            'low': np.array([]),
+            'volume': np.array([])
+        }
         try:
             if os.path.exists(data_file) and os.path.getsize(data_file) > 0:
                 df = pd.read_csv(data_file)
-                # Normalize column names: strip, lower
                 df.columns = [str(col).strip().lower() for col in df.columns]
-                # Accept any case for 'close' column
-                if 'close' in df.columns:
-                    return df['close'].to_numpy().flatten()
-                else:
-                    logger.warning(f"Could not find 'Close' column in {data_file}. Available columns: {list(df.columns)}")
-                    raise ValueError(f"No 'Close' column found in {data_file}. Columns: {list(df.columns)}")
-            else:
-                return np.array([])
+                
+                return {
+                    'close': df['close'].to_numpy() if 'close' in df else np.array([]),
+                    'high': df['high'].to_numpy() if 'high' in df else np.array([]),
+                    'low': df['low'].to_numpy() if 'low' in df else np.array([]),
+                    'volume': df['volume'].to_numpy() if 'volume' in df else np.array([])
+                }
+            return default_data
         except Exception as e:
-            logger.warning(f"Could not load data from {data_file}: {e}")
-            return np.array([])
+            logger.warning(f"Data loading error: {e}")
+            return default_data
 
     def _generate_synthetic_data(self, length: int = 10000) -> np.ndarray:
         """Generate synthetic EUR/USD-like data"""
@@ -402,12 +418,51 @@ class SmartForexEnvironment(gym.Env):
         }
 
     def _intensive_market_analysis(self, current_price: float) -> Dict:
-        """Perform intensive market analysis consuming significant CPU resources"""
+        """Enhanced market analysis with 50+ technical indicators"""
+        start_time = time.time()
         analysis = {}
-        
-        # Technical Indicators (CPU intensive)
-        if len(self.data) > 50:
-            prices = self.data[max(0, self.current_step-50):self.current_step+1]
+        if len(self.data) > 100:  # Increased window for more indicators
+            prices = self.data[max(0, self.current_step-100):self.current_step+1]
+            highs = self.high_data[max(0, self.current_step-100):self.current_step+1]
+            lows = self.low_data[max(0, self.current_step-100):self.current_step+1]
+            volumes = self.volume_data[max(0, self.current_step-100):self.current_step+1]
+            
+            # ======== 核心指标 (保留原有20个) ========
+            # Moving Averages
+            analysis.update({
+                'sma_5': np.mean(prices[-5:]),
+                'sma_10': np.mean(prices[-10:]),
+                'sma_20': np.mean(prices[-20:]),
+                'sma_50': np.mean(prices[-50:]),
+                'ema_12': self._calc_ema(prices[-12:], 12),
+                'ema_26': self._calc_ema(prices[-26:], 26),
+                'macd': self._calc_ema(prices[-12:], 12) - self._calc_ema(prices[-26:], 26)
+            })
+            
+            # ======== 新增30+指标 ========
+            # 1. 成交量指标
+            analysis.update({
+                'obv': self._calc_obv(prices, volumes),
+                'vwap': np.sum(prices[-20:]*volumes[-20:])/np.sum(volumes[-20:]),
+                'mfi': self._calc_mfi(prices, highs, lows, volumes),
+                'eom': self._calc_eom(prices, highs, lows, volumes)
+            })
+            
+            # 2. 高级震荡指标
+            analysis.update({
+                'cci': self._calc_cci(prices, highs, lows),
+                'ao': self._calc_ao(highs, lows),
+                'kst': self._calc_kst(prices),
+                'tsi': self._calc_tsi(prices)
+            })
+            
+            # 3. 波动扩展
+            analysis.update({
+                'atr': self._calc_atr(highs, lows, prices),
+                'keltner_upper': self._calc_keltner(prices, highs, lows, 'upper'),
+                'keltner_lower': self._calc_keltner(prices, highs, lows, 'lower'),
+                'ulcer': self._calc_ulcer(prices)
+            })
             
             # Multiple Moving Averages
             analysis['sma_5'] = np.mean(prices[-5:]) if len(prices) >= 5 else current_price
@@ -429,12 +484,25 @@ class SmartForexEnvironment(gym.Env):
             analysis['ema_26'] = ema_26
             analysis['macd'] = ema_12 - ema_26
             
-            # Bollinger Bands
-            sma_20 = analysis['sma_20']
-            std_20 = np.std(prices[-20:]) if len(prices) >= 20 else 0.001
-            analysis['bb_upper'] = sma_20 + (2 * std_20)
-            analysis['bb_lower'] = sma_20 - (2 * std_20)
-            analysis['bb_position'] = (current_price - analysis['bb_lower']) / (analysis['bb_upper'] - analysis['bb_lower'])
+            # 增强布林带 (添加带宽指标)
+            if len(prices) >= 20:
+                sma_20 = np.mean(prices[-20:])
+                std_20 = np.std(prices[-20:])
+                bb_upper = sma_20 + (2 * std_20)
+                bb_lower = sma_20 - (2 * std_20)
+                analysis.update({
+                    'bb_upper': bb_upper,
+                    'bb_lower': bb_lower,
+                    'bb_position': (current_price - bb_lower) / (bb_upper - bb_lower + 1e-8),
+                    'bb_width': (bb_upper - bb_lower) / sma_20
+                })
+            else:
+                analysis.update({
+                    'bb_upper': current_price,
+                    'bb_lower': current_price,
+                    'bb_position': 0.5,
+                    'bb_width': 0.0
+                })
             
             # RSI Calculation (CPU intensive)
             if len(prices) >= 14:
@@ -482,7 +550,113 @@ class SmartForexEnvironment(gym.Env):
                 analysis['fib_500'] = high - 0.500 * diff
                 analysis['fib_618'] = high - 0.618 * diff
         
+        # 添加指标计算耗时监控
+        analysis['calc_time'] = time.time() - start_time  
         return analysis
+
+    # ========== 新增指标计算方法 ==========
+    def _calc_ema(self, prices: np.ndarray, period: int) -> float:
+        alpha = 2 / (period + 1)
+        ema = prices[0]
+        for price in prices[1:]:
+            ema = price * alpha + ema * (1 - alpha)
+        return ema
+
+    def _calc_obv(self, prices: np.ndarray, volumes: np.ndarray) -> float:
+        obv = 0
+        for i in range(1, len(prices)):
+            if prices[-i] > prices[-i-1]:
+                obv += volumes[-i]
+            elif prices[-i] < prices[-i-1]:
+                obv -= volumes[-i]
+        return obv
+
+    def _calc_mfi(self, prices, highs, lows, volumes, period=14):
+        typical_prices = (highs[-period:] + lows[-period:] + prices[-period:]) / 3
+        money_flow = typical_prices * volumes[-period:]
+        pos_flow = money_flow[typical_prices > np.roll(typical_prices, 1)].sum()
+        neg_flow = money_flow[typical_prices < np.roll(typical_prices, 1)].sum()
+        return 100 - (100 / (1 + pos_flow / neg_flow)) if neg_flow > 0 else 100
+
+    def _calc_atr(self, highs, lows, prices, period=14):
+        tr = np.maximum(highs[-period:] - lows[-period:], 
+                       np.maximum(abs(highs[-period:] - prices[-period-1:-1]),
+                                 abs(lows[-period:] - prices[-period-1:-1])))
+        return np.mean(tr)
+
+    def _calc_eom(self, prices, highs, lows, volumes, period=14):
+        """Ease of Movement"""
+        distance = (highs[-period:] + lows[-period:])/2 - (highs[-period-1:-1] + lows[-period-1:-1])/2
+        box_ratio = volumes[-period:] / (highs[-period:] - lows[-period:])
+        return np.mean(distance / box_ratio)
+
+    def _calc_cci(self, prices, highs, lows, period=20):
+        """Commodity Channel Index"""
+        typical = (highs[-period:] + lows[-period:] + prices[-period:]) / 3
+        sma = np.mean(typical)
+        mad = np.mean(np.abs(typical - sma))
+        return (typical[-1] - sma) / (0.015 * mad)
+
+    def _calc_ao(self, highs, lows, short_period=5, long_period=34):
+        """Awesome Oscillator"""
+        short = (highs[-short_period:] + lows[-short_period:]) / 2
+        long = (highs[-long_period:] + lows[-long_period:]) / 2
+        return np.mean(short) - np.mean(long)
+
+    def _calc_kst(self, prices, roc1=10, roc2=15, roc3=20, roc4=30):
+        """Know Sure Thing"""
+        if len(prices) < roc4 + 1:  # 确保有足够的数据
+            return 0
+            
+        try:
+            # 计算各周期变化率
+            roc1_val = (prices[-1] - prices[-roc1-1]) / (prices[-roc1-1] + 1e-8)
+            roc2_val = (prices[-1] - prices[-roc2-1]) / (prices[-roc2-1] + 1e-8)
+            roc3_val = (prices[-1] - prices[-roc3-1]) / (prices[-roc3-1] + 1e-8)
+            roc4_val = (prices[-1] - prices[-roc4-1]) / (prices[-roc4-1] + 1e-8)
+            
+            return roc1_val + roc2_val*2 + roc3_val*3 + roc4_val*4
+        except Exception as e:
+            logger.warning(f"KST calculation error: {e}")
+            return 0
+
+    def _calc_tsi(self, prices, short=13, long=25):
+        """True Strength Index"""
+        if len(prices) < long + 1:
+            return 0
+        try:
+            # 计算价格动量
+            momentum = np.diff(prices[-long:])
+            if isinstance(momentum, (int, float)):
+                momentum = np.array([momentum])
+            
+            # 双重平滑动量
+            ema1 = self._calc_ema(momentum, short) if len(momentum) > 0 else 0
+            ema2 = self._calc_ema(np.array([ema1]), short) if isinstance(ema1, (int, float)) else 0
+            
+            # 双重平滑绝对动量
+            abs_ema1 = self._calc_ema(np.abs(momentum), short) if len(momentum) > 0 else 0
+            abs_ema2 = self._calc_ema(np.array([abs_ema1]), short) if isinstance(abs_ema1, (int, float)) else 0
+            
+            return 100 * ema2 / (abs_ema2 + 1e-8) if abs_ema2 != 0 else 0
+        except Exception as e:
+            logger.warning(f"TSI calculation error: {e}")
+            return 0
+
+    def _calc_keltner(self, prices, highs, lows, band_type='upper', period=20, multiplier=2):
+        """Keltner Channels"""
+        atr = self._calc_atr(highs, lows, prices, period)
+        ema = self._calc_ema(prices[-period:], period)
+        if band_type == 'upper':
+            return ema + multiplier * atr
+        else:
+            return ema - multiplier * atr
+
+    def _calc_ulcer(self, prices, period=14):
+        """Ulcer Index"""
+        max_close = np.maximum.accumulate(prices[-period:])
+        drawdown = 100 * (prices[-period:] - max_close) / max_close
+        return np.sqrt(np.mean(drawdown**2))
     
     def _risk_assessment(self, analysis: Dict, action: int) -> Dict:
         """Intensive risk assessment consuming more CPU resources"""
